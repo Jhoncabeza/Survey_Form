@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">Fornite - Equipo Cabezwosky</h1>
+            <p id="description" class="description text-center">
+                Inscripciones de torneo de Fornite
+            </p>
+        </header>
+
+
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Nombre</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Ingresa tu nombre" required />
+            </div>
+
+            <div class="form-group">
+                <label id="email-label" for="email">Correo Electrónico</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Ingresa tu correo electrónico" required />
+            </div>
+
+            <div class="form-group">
+                <label id="number-label" for="number">Edad<span class="clue">(+18)</span></label>
+                <input type="number" name="age" id="number" min="18" max="99" class="form-control" placeholder="Edad" />
+            </div>
+
+            <div class="form-group">
+                <p>¿Cual de estos modos te gustaria jugar?</p>
+                <select id="dropdown" name="role" class="form-control" required>
+                    <option disabled selected value>Selecciona un modo</option>
+                    <option value="Duo">Duo</option>
+                    <option value="Trio">Trio</option>
+                    <option value="Escuadron">Escuadron</option>
+                    <option value="Creativo">Creativo</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <p>¿Sientes que ganaras este torneo con tu equipo?</p>
+                <label>
+                    <input name="user-recommend" value="definitely" type="radio" class="input-radio"
+                        checked />Definitivamente sí</label>
+                <label>
+                    <input name="user-recommend" value="maybe" type="radio" class="input-radio" />Quizás</label>
+    
+                <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio" />No estoy seguro</label>
+            </div>
+    
+            <div class="form-group">
+                <p>
+                    ¿Que modo de juego te gusta más?
+                </p>
+                <select id="most-like" name="mostLike" class="form-control" required>
+                    <option disabled selected value>Selecciona una opción</option>
+                    <option value="challenges">Arena</option>
+                    <option value="projects">Creativo</option>
+                    <option value="community">No competitivo</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <p>
+                    ¿Cuáles son tus armas favoritas del juego?
+                </p>
+    
+                <label><input name="prefer" value="pico" type="checkbox" class="input-checkbox" />Pico</label>
+                <label><input name="prefer" value="Fusiles de asalto" type="checkbox" class="input-checkbox" />Fusiles de asalto</label>
+                <label><input name="prefer" value="smg" type="checkbox" class="input-checkbox" />Subfusiles </label>
+                <label><input name="prefer" value="Ametralladoras Ligeras" type="checkbox" class="input-checkbox" />Ametralladoras Ligeras</label>
+                <label><input name="prefer" value="Escopetas" type="checkbox" class="input-checkbox" />Escopetas</label>
+                <label><input name="prefer" value="Lanzagranadas y lanzamisiles" type="checkbox" class="input-checkbox" />Lanzagranadas y lanzamisiles</label>
+                <label><input name="prefer" value="Rifles de francotirador" type="checkbox" class="input-checkbox" />Rifles de francotirador</label>
+                <label><input name="prefer" value="Pistolas" type="checkbox" class="input-checkbox" />Pistolas</label>
+            </div>
+    
+            <div class="form-group">
+                <p>¿Tienes algún comentario?</p>
+                <textarea id="comments" class="input-textarea" name="comment"
+                    placeholder="Escribe tu comentario aquí"></textarea>
+            </div>
+    
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Enviar
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
